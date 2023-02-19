@@ -1,0 +1,82 @@
+{
+  "users": [
+    {
+      "firstName": "Petar",
+      "lastName": "Petrović",
+      "username": "pera91",
+      "password": "111111",
+      "email": "pera91@gmail.com",
+      "adress": "Sinđelićeva 1",
+      "city": "Niš",
+      "phoneNumber": "0641861991",
+      "gender": "M",
+      "admin": true,
+      "id": 1
+    },
+    {
+      "firstName": "Aleksandra",
+      "lastName": "Nikolic",
+      "username": "alex88",
+      "password": "111111",
+      "email": "alex88@gmail.com",
+      "adress": "Kneza Milosa 15",
+      "city": "Beograd",
+      "phoneNumber": "0646658737",
+      "gender": "F",
+      "admin": true,
+      "id": 2
+    },
+    {
+      "firstName": "Miloš",
+      "lastName": "Živković",
+      "username": "misa80",
+      "password": "000000",
+      "email": "misa80@gmail.com",
+      "adress": "Kralja Milana 15",
+      "city": "Novi Sad",
+      "phoneNumber": "0646658737",
+      "gender": "M",
+      "admin": false,
+      "id": 3
+    },
+    {
+      "firstName": "Aleksandar",
+      "lastName": "Đorđević",
+      "email": "aca95@gmai.com",
+      "username": "aca95",
+      "password": "111111",
+      "adress": "Triglavska 15",
+      "city": "Subotica",
+      "phoneNumber": "0642352351",
+      "gender": "M",
+      "admin": false,
+      "id": 4
+    },
+    {
+      "firstName": "Branislav",
+      "lastName": "Mirković",
+      "email": "bane87@mail.com",
+      "username": "bane87",
+      "password": "555555",
+      "adress": "Majakovskog 10",
+      "city": "Požarevac",
+      "phoneNumber": "0642583693",
+      "gender": "M",
+      "admin": false,
+      "id": 5
+    },
+    {
+      "firstName": "Milena",
+      "lastName": "Pešić",
+      "email": "milena77@gmail.com",
+      "username": "milena77",
+      "password": "777777",
+      "adress": "Petra Kočića 3",
+      "city": "Zaječar",
+      "phoneNumber": "0648521479",
+      "gender": "F",
+      "admin": false,
+      "id": 6
+    }
+  ]
+}
