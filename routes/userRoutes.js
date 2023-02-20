@@ -36,16 +36,16 @@ router.get('/', async (req, res) => {
 // post one ad
 router.post('/', async (req, res) => {
   const user = new User({
-    firstName: req.body.text,
-    lastName: req.body.text,
-    username: req.body.text,
-    password: req.body.text,
-    email: req.body.text,
-    adress: req.body.text,
-    city: req.body.text,
-    phoneNumber: req.body.text,
-    gender: req.body.text,
-    admin: req.body.text,
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    username: req.body.username,
+    password: req.body.password,
+    email: req.body.email,
+    adress: req.body.adress,
+    city: req.body.city,
+    phoneNumber: req.body.phoneNumber,
+    gender: req.body.gender,
+    admin: req.body.admin,
   });
   try {
     const savedUser = await user.save();
