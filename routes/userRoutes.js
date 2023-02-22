@@ -28,12 +28,19 @@ router.get('/', async (req, res) => {
   }
 });
 
-// get one user
+// Get single user
+router.get('/:id', async (req, res) => {
+  try {
+    const user = await User.findById(req.params.id);
+    res.json({ success: true, data: user });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ success: false, error: 'Something went wrong' });
+  }
+});
 
-// router.get('/:id', (req, res) => {
-//   res;
-// });
-// post one ad
+//add user
+
 router.post('/', async (req, res) => {
   const user = new User({
     firstName: req.body.firstName,
@@ -56,4 +63,41 @@ router.post('/', async (req, res) => {
   }
 });
 
+// Update user
+router.put('/:id', async (req, res) => {
+  try {
+    const updatedUser = await User.findByIdAndUpdate(
+      req.params.id,
+      {
+        $set: {
+          firstName: req.body.firstName,
+          lastName: req.body.lastName,
+          username: req.body.username,
+          password: req.body.password,
+          email: req.body.email,
+          adress: req.body.adress,
+          city: req.body.city,
+          phoneNumber: req.body.phoneNumber,
+          gender: req.body.gender,
+          admin: req.body.admin,
+        },
+      },
+      { new: true }
+    );
+    res.json({ success: true, data: updatedUser });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ success: false, error: 'Something went wrong' });
+  }
+});
+// Delete idea
+router.delete('/:id', async (req, res) => {
+  try {
+    await User.findByIdAndDelete(req.params.id);
+    return res.json({ success: true, data: {} });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ success: false, error: 'Something went wrong' });
+  }
+});
 module.exports = router;
